@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko"
-title                    : "이동훈의 AI박스"
+title                    : "Rikky의 AI박스"
 title_separator          : "-"
-name                     : "이동훈"
-description              : "인공지능을 연구합니다."
+name                     : ""
+description              : ""
 url                      : "https://glee1228.github.io"
 baseurl                  : ""
 repository               : "glee1228/glee1228.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "이동훈"
+  name             : "Rikky"
   avatar           : "/assets/images/main.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "인공지능을 공부하고 연구합니다."
   location         : "Seoul"
