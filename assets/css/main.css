@@ -213,14 +213,14 @@ li.dark:hover {
 .flex-spacer-2 {
     flex: 1;
 }
-.bgi {
-    background-attachment: fixed;
+.bgk{
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .intro {
-    background-image: url('../img/porsche.jpg');
+    background-image: url('../img/img12.jpg');
 }
 .c1930 {
     background-image: url('../img/1930.jpg');
@@ -259,6 +259,17 @@ li.dark:hover {
 .panel.last {
     background-color: black;
 }
+
+.panel.horizontal{
+    height: 100%;
+    width:900%;
+}
+
+.column{
+    width:50%;
+  height: 100%;
+}
+
 .year {
     width: 52%;
     display: block;
