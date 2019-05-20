@@ -1,4 +1,5 @@
 var controller = new ScrollMagic.Controller({
+    vertical:false,
     globalSceneOptions: {
         triggerHook: 'onCenter',
     }
@@ -13,6 +14,14 @@ var navs = document.querySelectorAll('ul li')
 var sideNav = document.querySelector('ul.side-nav')
 var topbar = document.querySelector('div.topbar')
 var audios = document.querySelectorAll('audio:not(#startAudio)')
+var transition_description = function(){return new TweenLite.fromTo('#description',2,{opacity : 0}, {opacity : 1})};
+
+var reset_Area = function(){
+
+    transition_description().reverse();
+    $('#description').empty();
+    TweenLite.killAll();
+};
 
 function darkToggle(elementId) {
     if (['section1'].includes(elementId)) {
@@ -46,17 +55,19 @@ for (var i = 0; i < slides.length; i++) {
                 sideNav.style.display = 'none'
             }
             if ((event.type === 'start' || event.type === 'end') && event.state === 'DURING') {
-                triggerElemenAudio.play()
+                // triggerElemenAudio.play()
             }
             if ((event.type === 'start' && event.state === 'BEFORE') || event.type === 'leave') {
-                triggerElemenAudio.pause()
+                // triggerElemenAudio.pause()
 
             }
             if (event.type === 'start' || event.type === 'end') {
                 darkToggle(triggerElementId)
             }
         })
-
+        reset_Area();
+        transition_description().play();
+        description_step(i);
         scene.setClassToggle(navs[i], 'active')
     }
 
@@ -66,7 +77,7 @@ for (var i = 0; i < slides.length; i++) {
 }
 
 // scrollTo
-var anchorIds = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8', 'section9', 'section10', 'section11']
+var anchorIds = ['section1']
 
 anchorIds.forEach(function(el) {
     var idx = anchorIds.indexOf(el);
@@ -99,12 +110,7 @@ audios.forEach(function(el) {
     }
 })
 
-//start button
-document.getElementById('startBtn').onclick = function() {
-    document.getElementById('startAudio').play()
-    document.querySelector('body').style.position = 'static'
-    controller.scrollTo('#section1')
-}
+
 
 // up-down ky binding
 document.addEventListener('keydown', function(e) {

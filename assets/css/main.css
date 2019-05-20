@@ -133,23 +133,27 @@ li.dark:hover {
 .mute-on {
     background: #B13C3C url('../img/mute_on.png') center center no-repeat;
 }
+
 .content-wrapper {
     display: flex;
     display: -webkit-flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     height: 100%;
 }
 .content-wrapper section {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
 }
 .scrollContent {
     height: 100%;
 }
 .landing {
     background: url('../img/gwanghwamoon.png') center center no-repeat;
-    min-height: -webkit-fill-available;
+    min-height : -moz-available;
+    min-height : -webkit-fill-available;
+    min-height : fill-available;
     display: flex;
+
 }
 .ladingWrapper {
     width: 80%;
@@ -157,28 +161,26 @@ li.dark:hover {
     display: flex;
     flex-direction: column;
 }
-.award {
-    position: absolute;
-    right: 0;
-    top: 20px;
-    z-index: 99;
-    width: 90px;
-    text-indent: -666em;
-    overflow: hidden;
-}
-.award a {
-    background-image: url('../img/awwwards_honorable_white_right.png');
-    height: 135px;
-    background-repeat: no-repeat;
-    background-size: 90px 135px;
-    display: block;
+
+.title{
+    padding-top: 8%;
+    padding-left: 200px;
+    padding-bottom: 1px;
+    letter-spacing: 1px;
 }
 .logo {
     padding-top: 8%;
-    color: #7d7d7d;
+    color: #fbfffb;
     padding-bottom: 1px;
     letter-spacing: 1px;
-    font-size: 20pt;
+    font-size: 35pt;
+    font-weight: 300;
+}
+.logo2{
+    color: #fbfffb;
+    padding-bottom: 1px;
+    letter-spacing: 1px;
+    font-size: 25pt;
     font-weight: 300;
 }
 .logo span {
@@ -187,8 +189,9 @@ li.dark:hover {
     padding-right: 2px;
 }
 .volume {
-    color: rgba(113, 113, 113, 1);
+    color: rgb(255, 251, 247);
     font-weight: 300;
+    font-size: 18pt;
 }
 .flex-spacer-1 {
     flex: 5;
@@ -213,6 +216,13 @@ li.dark:hover {
 .flex-spacer-2 {
     flex: 1;
 }
+
+.bgi{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .bgk{
     background-attachment: scroll;
     background-position: center;
@@ -220,7 +230,7 @@ li.dark:hover {
     background-size: cover;
 }
 .intro {
-    background-image: url('../img/img12.jpg');
+    background-image: url('../img/gwanghwamoon.png');
 }
 .c1930 {
     background-image: url('../img/1930.jpg');
@@ -252,17 +262,22 @@ li.dark:hover {
 .c2020 {
     background-image: url('../img/2020.jpg');
 }
+.seoul{
+    width:1100%;
+    background-image: url('../img/img12.jpg')
+}
 .panel {
     height: 100%;
     width: 100%;
 }
+
 .panel.last {
     background-color: black;
 }
 
-.panel.horizontal{
+.horizontal{
     height: 100%;
-    width:900%;
+    width:1000%;
 }
 
 .column{
@@ -291,12 +306,26 @@ li.dark:hover {
     }
 }
 .year hr {
-    width: 3%;
     border-style: solid;
     color: #B10909;
-    border-width: 1px;
     margin-top: 11px;
 }
+.graph{
+    align-self: auto;
+    width : 60%;
+
+}
+.description{
+    position : fixed;
+    width : auto;
+    height : auto;
+    left : 40%;
+    top : 10%;
+    background-color : rgba(255, 255, 255, 0.4);
+
+
+}
+
 .year-inner {
     font-size: 22pt;
     color: white;
