@@ -4,7 +4,7 @@ var resMax = 24;
 
 
 function preload(){
-	img = loadImage("img/amsal.jpeg");
+	img = loadImage("assets/img/amsal.jpeg");
 }
 
 function setup() {

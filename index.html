@@ -163,7 +163,7 @@ ul.ex1 {
 
           d3.select("h1")
                   .transition()
-                  .duration(2500)
+                  .duration(2000)
                   .on("start", function repeat() {
                     d3.active(this)
                             .tween("text", function() {
@@ -175,7 +175,7 @@ ul.ex1 {
                               return function(t) { that.text(format(i(t))); };
                             })
                             .transition()
-                            .delay(1500)
+                            .delay(1000)
                             .on("start", repeat);
                   });
 
@@ -183,7 +183,7 @@ ul.ex1 {
 
         </script>
         <p class="lead">일자별 네이버 '역사' 관련 키워드 검색량</p>
-        <p class="mt-4 mb-5"><a class="btn btn-secondary" href="https://www.froala.com">키워드 더 알아보기</a></p>
+        <p class="mt-4 mb-5"><a class="btn btn-secondary" href='animation.html'>역사 시각화 바로가기</a></p>
 
 
       </div>
