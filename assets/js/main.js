@@ -14,13 +14,18 @@ var navs = document.querySelectorAll('ul li')
 var sideNav = document.querySelector('ul.side-nav')
 var topbar = document.querySelector('div.topbar')
 var audios = document.querySelectorAll('audio:not(#startAudio)')
+var description = document.querySelector('div.description')
 var transition_description = function(){return new TweenLite.fromTo('#description',2,{opacity : 0}, {opacity : 1})};
 
+// console.log(i);
+// transition_description().play();
+// description_step(i);
+//
 var reset_Area = function(){
 
     transition_description().reverse();
     $('#description').empty();
-    TweenLite.killAll();
+    tweenLite.killAll();
 };
 
 function darkToggle(elementId) {
@@ -29,6 +34,11 @@ function darkToggle(elementId) {
             el.classList.toggle('dark')
         })
     }
+}
+function fn(str){
+    var res;
+    res = str.replace(/[^0-9]/g,"");
+    return res;
 }
 
 for (var i = 0; i < slides.length; i++) {
@@ -44,12 +54,20 @@ for (var i = 0; i < slides.length; i++) {
             sideNav.style.display = 'block'
         }
     })
+
+    var PreviousStep=0;
     if (i < 11) {
         scene.on("change progress start end enter leave", function (event) {
             var triggerElement = event.currentTarget.triggerElement()
             var triggerElementId = triggerElement.id;
             var triggerElemenAudio = triggerElement.querySelector('audio')
-
+            currentStep=fn(triggerElementId);
+            // console.log('현재 section',currentStep);
+            if(currentStep!=PreviousStep){
+                transition_description().play();
+                PreviousStep = currentStep;
+                description_step(currentStep);
+            }
             if (event.type === 'start' && event.state === 'BEFORE' &&triggerElementId === 'section1') {
                 topbar.style.display = 'none'
                 sideNav.style.display = 'none'
@@ -65,9 +83,7 @@ for (var i = 0; i < slides.length; i++) {
                 darkToggle(triggerElementId)
             }
         })
-        reset_Area();
-        transition_description().play();
-        description_step(i);
+
         scene.setClassToggle(navs[i], 'active')
     }
 
@@ -117,7 +133,6 @@ document.addEventListener('keydown', function(e) {
     if (e.code === 'ArrowUp' || e.code === 'ArrowDown') {
         e.preventDefault()
         var nextSceneNav = document.querySelector('li.active')
-
         if (e.code === 'ArrowUp' && sideNav.style.display === 'block') {
             if (nextSceneNav === null) {
                 controller.scrollTo('#section11')

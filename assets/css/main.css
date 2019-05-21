@@ -316,21 +316,22 @@ li.dark:hover {
 
 }
 .description{
+    max-width: 450px;
     position : fixed;
     width : auto;
     height : auto;
-    left : 40%;
+    left : 60%;
     top : 10%;
     background-color : rgba(255, 255, 255, 0.4);
-
+    padding : 30px;
 
 }
 
 .year-inner {
     font-size: 22pt;
-    color: white;
+    color: #B10909;
     width: 100%;
-    margin-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 .year-desc {
