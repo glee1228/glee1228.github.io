@@ -8,15 +8,15 @@ function preload(){
 }
 
 function setup() {
-	frameRate(10);
+	frameRate(60);
 
 	var sc = 1;
-	canvas=createCanvas(windowWidth/2,(windowWidth/2)*(666/1000));
-	canvas.position(windowWidth/2,200);
+	canvas=createCanvas(windowWidth,windowHeight);
+	canvas.position(0,0);
 	pixelDensity(1);
 	scale(sc);
 
-	img.resize(windowWidth/2, (windowWidth/2)*(666/1000));
+	img.resize(windowWidth, windowHeight);
 	image(img,0,0);
 
 	var d = pixelDensity();

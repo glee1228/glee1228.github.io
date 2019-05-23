@@ -9,18 +9,21 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-  <script src="sketch.js"></script>
+
+
+  <!--<script src="sketch.js"></script>-->
+
 </head>
 <style>
 
 .fdb-block2 {
     font-family: Roboto,sans-serif;
-    font-size: 16px;
+    font-size: 50px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -144,7 +147,17 @@ ul.ex1 {
 <section class="fdb-block fp-active" data-block-type="contents" data-id="4" draggable="true">
 
   <div class="col-fill-right">
+    <script>
+      　
+$.ajax({
+  type: 'POST',
+  url: url,
+  data: data,
+  success: success,
+  dataType: data
+})
 
+    </script>
 
   </div>
 
@@ -163,7 +176,7 @@ ul.ex1 {
 
           d3.select("h1")
                   .transition()
-                  .duration(2000)
+                  .duration(1000)
                   .on("start", function repeat() {
                     d3.active(this)
                             .tween("text", function() {
@@ -175,7 +188,7 @@ ul.ex1 {
                               return function(t) { that.text(format(i(t))); };
                             })
                             .transition()
-                            .delay(1000)
+                            .delay(500)
                             .on("start", repeat);
                   });
 
@@ -185,42 +198,11 @@ ul.ex1 {
         <p class="lead">일자별 네이버 '역사' 관련 키워드 검색량</p>
         <p class="mt-4 mb-5"><a class="btn btn-secondary" href='animation.html'>역사 시각화 바로가기</a></p>
 
-
       </div>
     </div>
   </div>
 </section>
 
-
-
-<div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="RegisterModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="RegisterModalLabel"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <section class="fdb-block2 fp-active"  data-block-type="forms" data-id="1" draggable="true">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-8 col-xl-6">
-        <div class="row">
-          <div class="col text-center">
-
-            <p class="text-h3">Register and recognize you</p>
-          </div>
-        </div>
-          </div>
-    </div>
-  </div>
-</section>
-      </div>
-      </div>
-  </div>
-</div>
 <section class="fdb-block fp-active" data-block-type="contents" data-id="1" draggable="true">
   <div class="container">
     <div class="row text-center align-items-center">
@@ -250,87 +232,7 @@ ul.ex1 {
     </div>
   </div>
 </section>
-<section class="fdb-block team-8" data-block-type="teams" data-id="24" draggable="true">
-  <div class="container">
-    <div class="row text-center justify-content-center">
-      <div class="col-8" id="team">
-        <h1>Our Amazing Team</h1>
-        <p class="text-h3">Team's Introduce</p>
-        <p class="text-h4">SOBUBJEON은 대중 매체를 통해서 전달되는 콘텐츠 중 질적, 양적으로 완성도가 높다고 할 수 있는 영화를 통하여 한국 근현대사의 전체적인 모습을 보여줄 수 있는 웹페이지를 제작하고자 합니다.<br> 이 프로젝트는 역사를 공부하는 학생들이 단순 암기식으로 학습하는 것에서 벗어나 영화를 통하여 역사에 대한 흥미를 가지고 학습자 스스로 학습할 수 있는 기틀을 만들어준다는 점에 그 의의가 있습니다. </p>
-      </div>
-    </div>
 
-    <div class="row-100"></div>
-
-    <div class="row justify-content-center text-left">
-      <div class="col-sm-6">
-        <div class="row align-items-center">
-          <div class="col-4">
-            <img alt="image" class="img-fluid" src="http://encykorea.aks.ac.kr/Contents/GetImage?id=9be37fa3-780f-4681-9894-093daa411773&w=260&h=260&fit=w&clip=1">
-          </div>
-
-          <div class="col-8">
-            <h3><strong>정원혁</strong></h3>
-            <p class="text-h3">역할</p>
-
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class="row align-items-center">
-          <div class="col-4">
-            <img alt="image" class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/An_Jung-geun.JPG/300px-An_Jung-geun.JPG">
-          </div>
-
-          <div class="col-8">
-            <h3><strong>이동훈</strong></h3>
-            <p class="text-h3">역할</p>
-
-            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row-70"></div>
-
-    <div class="row justify-content-center text-left">
-      <div class="col-sm-6">
-        <div class="row align-items-center">
-          <div class="col-4">
-            <img alt="image" class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Yfj.jpg/250px-Yfj.jpg">
-          </div>
-
-          <div class="col-8">
-            <h3><strong>유재일</strong></h3>
-            <p class="text-h3">역할</p>
-
-            <p>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class="row align-items-center">
-          <div class="col-4">
-            <img alt="image" class="img-fluid" src="http://www.newstof.com/news/photo/201902/1324_3499_3046.jpg">
-          </div>
-
-          <div class="col-8">
-            <h3><strong>김지현</strong></h3>
-            <p class="text-h3">역할</p>
-
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row-70"></div>
-
-    </div>
-</section>
 <footer class="fdb-block footer-small" data-block-type="footers" data-id="15">
   <div class="container">
     <div class="row text-center align-items-center">
@@ -353,13 +255,7 @@ ul.ex1 {
         </ul>
       </div>
 
-      <div class="col-12 col-lg-2 mt-4 mt-lg-0 text-lg-right">
-        <a href="https://www.froala.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;
-        <a href="https://www.froala.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;
-        <a href="https://www.froala.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;
-        <a href="https://www.froala.com"><i class="fa fa-pinterest" aria-hidden="true"></i></a>&nbsp;&nbsp;
-        <a href="https://www.froala.com"><i class="fa fa-google" aria-hidden="true"></i></a>
-      </div>
+
     </div>
 
     <div class="row mt-4">

@@ -1,7 +1,7 @@
 var controller = new ScrollMagic.Controller({
     vertical:false,
     globalSceneOptions: {
-        triggerHook: 'onCenter',
+        triggerHook: 0.0,
     }
 })
 controller.scrollTo(function(newpos) {
@@ -14,22 +14,23 @@ var navs = document.querySelectorAll('ul li')
 var sideNav = document.querySelector('ul.side-nav')
 var topbar = document.querySelector('div.topbar')
 var audios = document.querySelectorAll('audio:not(#startAudio)')
-var description = document.querySelector('div.description')
 var transition_description = function(){return new TweenLite.fromTo('#description',2,{opacity : 0}, {opacity : 1})};
+var transition_player = function(){return new TweenLite.fromTo('#player',2,{opacity : 0}, {opacity : 1})};
 
 // console.log(i);
 // transition_description().play();
 // description_step(i);
 //
 var reset_Area = function(){
-
+    transition_player().reverse();
     transition_description().reverse();
+    $('#player').empty();
     $('#description').empty();
     tweenLite.killAll();
 };
 
 function darkToggle(elementId) {
-    if (['section1'].includes(elementId)) {
+    if (['section1', 'section3', 'section5', 'section7', 'section9', 'section11'].includes(elementId)) {
         navs.forEach(function(el) {
             el.classList.toggle('dark')
         })
@@ -63,10 +64,19 @@ for (var i = 0; i < slides.length; i++) {
             var triggerElemenAudio = triggerElement.querySelector('audio')
             currentStep=fn(triggerElementId);
             // console.log('현재 section',currentStep);
+            if(currentStep==1){
+
+                $('.description').css('background-color', 'rgba(255, 255, 255, 0.0)');
+            }
+            else{
+                $('.description').css('background-color', 'rgba(255, 255, 255, 0.5)');
+            }
             if(currentStep!=PreviousStep){
                 transition_description().play();
+                transition_player().play();
                 PreviousStep = currentStep;
                 description_step(currentStep);
+                youtubePlay(currentStep);
             }
             if (event.type === 'start' && event.state === 'BEFORE' &&triggerElementId === 'section1') {
                 topbar.style.display = 'none'
@@ -93,15 +103,18 @@ for (var i = 0; i < slides.length; i++) {
 }
 
 // scrollTo
-var anchorIds = ['section1']
+var anchorIds = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8', 'section9', 'section10', 'section11']
 
 anchorIds.forEach(function(el) {
     var idx = anchorIds.indexOf(el);
 
     navs[idx].onclick = function() {
+        console.log('#' + el);
         controller.scrollTo('#' + el)
+
     }
 })
+
 
 // mute
 document.getElementById('muteBtn').onclick = function() {
