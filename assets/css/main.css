@@ -32,7 +32,7 @@ body, div, section, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, f
     padding: 9px 9px 0 25px;
     transition: all .2s ease-in-out;
 }
-.top-logo:hover, .author:hover {
+.top-logo:hover {
     background-color: #F2F2F2;
     opacity: 0.5;
 }

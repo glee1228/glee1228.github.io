@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -14,43 +14,35 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
 
-
-  <!--<script src="sketch.js"></script>-->
+  <script src="sketch.js"></script>
 
 </head>
 <style>
-
-.fdb-block2 {
-    font-family: Roboto,sans-serif;
-    font-size: 50px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizelegibility;
-    padding: 50px 0;
-    margin-bottom: 50px;
-    color: #444;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    background-color: #fff;
+.logo {
+  font-size :25px;
+    flex: 1;
+    padding: 0px 0px 0 45px;
+    transition: all .2s ease-in-out;
+}
+.logo:hover {
+    background-color: #F2F2F2;
+    opacity: 0.5;
+}
+.logo span {
+    color: #b13c3c;
+    font-size: 65pt;
+    font-weight: 500;
+    padding-right: 2px;
 }
 svg:not(:root).svg-inline--fa {
   overflow: visible
 }
-.svg-inline--fa {
-  display: inline-block;
-  font-size: inherit;
-  height: 1em;
-  overflow: visible;
-  vertical-align: -.125em
-}
 
+h1{
+  font-size: 80px !important;
 
-.svg-inline--fa.fa-w-16 {
-  width: 1em
 }
 
 .fa-layers svg.svg-inline--fa {
@@ -66,7 +58,6 @@ svg:not(:root).svg-inline--fa {
   -webkit-transform-origin: center center;
   transform-origin: center center
 }
-
 
 .fa-ul>li {
   position: relative
@@ -97,115 +88,78 @@ svg:not(:root).svg-inline--fa {
   }
 }
 
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px
-}
 ul.ex1 {
   margin-left: 50px;
 }
-
+#p5Section{
+  padding-top : 0px;
+}
 </style>
 <body>
+
 <header data-block-type="headers" data-id="12" class="">
   <div class="container" id="home">
-    <nav class="navbar navbar-expand-md no-gutters">
-      <div class="col-3 text-left">
 
-            <a class="nav-link" href="index.html"><img src="assets/img/logo2.png" height="130" alt="image"></a>
-      </div>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-2" aria-controls="navbarNav7" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-      <div class="collapse navbar-collapse navbar-collapse-2 justify-content-center col-md-6" id="navbarNav7">
-        <ul class="ex1 navbar-nav justify-content-center">
-          <li class="col-4 nav-item active">
-            <a class="nav-link" href="#home"><h4>Home</h4> <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="col-4 nav-item">
-            <a class="nav-link" href="#demo"><h4>Demo</h4></a>
-          </li>
-          <li class="col-4 nav-item">
-            <a class="nav-link" href="#team"><h4>Team</h4></a>
-          </li>
-
-        </ul>
-      </div>
-
-
-    </nav>
   </div>
 </header>
-<section class="fdb-block fp-active" data-block-type="contents" data-id="4" draggable="true">
+ <script>
+ var width = window.innerWidth;
+  var height = window.innerHeight;
+  $('.description').css('padding-top', height*2/3-150);
+</script>
+<section class="fdb-block fp-active" data-block-type="contents" data-id="4" draggable="true" id="p5Section">
 
-  <div class="col-fill-right">
-    <script>
-      　
-$.ajax({
-  type: 'POST',
-  url: url,
-  data: data,
-  success: success,
-  dataType: data
-})
 
-    </script>
+  <!--<div class="col-fill-right">-->
 
-  </div>
 
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md-5 text-center">
+  <!--</div>-->
 
-        <h1>1900</h1>
+  <!--<div class="container py-5">-->
+    <!--<div class="row">-->
+      <!--<div class="col-8 col-md-5 text-center">-->
 
-        <script src="//d3js.org/d3.v4.0.0-alpha.23.min.js"></script>
-        <script>
+        <!--&lt;!&ndash;<h1>1900</h1>&ndash;&gt;-->
 
-          var format = d3.format("d");
-          var years = [1900, 1910, 1920, 1930, 1940,1950,1960,1970,1970,1980,1990,2000,2010];
-          var ind = 0;
+        <!--&lt;!&ndash;<script src="//d3js.org/d3.v4.0.0-alpha.23.min.js"></script>&ndash;&gt;-->
+        <!--&lt;!&ndash;<script>&ndash;&gt;-->
 
-          d3.select("h1")
-                  .transition()
-                  .duration(1000)
-                  .on("start", function repeat() {
-                    d3.active(this)
-                            .tween("text", function() {
-                              var that = d3.select(this),
-                                      i = d3.interpolateNumber(that.text(), years[ind++]);
-                                      if(years.length==ind){
-                                        ind=0;
-                                      }
-                              return function(t) { that.text(format(i(t))); };
-                            })
-                            .transition()
-                            .delay(500)
-                            .on("start", repeat);
-                  });
+          <!--&lt;!&ndash;var format = d3.format("d");&ndash;&gt;-->
+          <!--&lt;!&ndash;var years = [1900, 1930, 1970,2000,2010];&ndash;&gt;-->
+          <!--&lt;!&ndash;var ind = 0;&ndash;&gt;-->
+
+          <!--&lt;!&ndash;d3.select("h1")&ndash;&gt;-->
+                  <!--&lt;!&ndash;.transition()&ndash;&gt;-->
+                  <!--&lt;!&ndash;.duration(3000)&ndash;&gt;-->
+                  <!--&lt;!&ndash;.on("start", function repeat() {&ndash;&gt;-->
+                    <!--&lt;!&ndash;d3.active(this)&ndash;&gt;-->
+                            <!--&lt;!&ndash;.tween("text", function() {&ndash;&gt;-->
+                              <!--&lt;!&ndash;var that = d3.select(this),&ndash;&gt;-->
+                                      <!--&lt;!&ndash;i = d3.interpolateNumber(that.text(), years[ind++]);&ndash;&gt;-->
+                                      <!--&lt;!&ndash;if(years.length==ind){&ndash;&gt;-->
+                                        <!--&lt;!&ndash;ind=0;&ndash;&gt;-->
+                                      <!--&lt;!&ndash;}&ndash;&gt;-->
+                              <!--&lt;!&ndash;return function(t) { that.text(format(i(t))); };&ndash;&gt;-->
+                            <!--&lt;!&ndash;})&ndash;&gt;-->
+                            <!--&lt;!&ndash;.transition()&ndash;&gt;-->
+                            <!--&lt;!&ndash;.delay(500)&ndash;&gt;-->
+                            <!--&lt;!&ndash;.on("start", repeat);&ndash;&gt;-->
+                  <!--&lt;!&ndash;});&ndash;&gt;-->
 
 
 
-        </script>
-        <p class="lead">일자별 네이버 '역사' 관련 키워드 검색량</p>
-        <p class="mt-4 mb-5"><a class="btn btn-secondary" href='animation.html'>역사 시각화 바로가기</a></p>
+        <!--&lt;!&ndash;</script>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p class="lead">일자별 네이버 '역사' 관련 키워드 검색량</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p class="mt-4 mb-5"><a class="btn btn-secondary" href='animation.html'>역사 시각화 바로가기</a></p>&ndash;&gt;-->
 
-      </div>
-    </div>
-  </div>
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
 </section>
 
-<section class="fdb-block fp-active" data-block-type="contents" data-id="1" draggable="true">
+<section class="fdb-block fp-active" data-block-type="contents" data-id="1" draggable="true" id="desccribe1">
   <div class="container">
-    <div class="row text-center align-items-center">
+    <div class="row ">
       <div class="col-8 col-md-4">
         <img alt="image" class="img-fluid" src="https://post-phinf.pstatic.net/MjAxODExMDlfNTYg/MDAxNTQxNzY1NjU3NjA1.LgU17zqmkF08iFxh5i0mu48hf0zgsgkmTuEjyEI7efAg.aCMWCT-kcFMchK9jvTfwkJmlAmn2ZZdEURcFVTdS2ukg.JPEG/CollageMaker_20181109_211324135.jpg?type=w1200">
       </div>
@@ -225,9 +179,20 @@ $.ajax({
       </div>
 
       <div class="col-12 col-md-6 col-lg-5 ml-auto pt-5 pt-md-0">
-        <img alt="image" class="fdb-icon" src="assets/img/agenda.png">
-        <h1>소법전</h1>
-        <p class="lead">영화로 보는 한국 근현대사</p>
+        <!--<img alt="image" class="fdb-icon" src="assets/img/agenda.png">-->
+            <div class="logo">
+              <span>소</span>프트웨어융합대학
+            </div>
+        <div class="logo">
+            <span>법</span>학부
+        </div>
+         <div class="logo">
+            <span>전</span>자정보공학대학
+        </div>
+        <div class="text-center align-items-center">
+        <!--<p class="lead">영화로 보는 한국 근현대사</p>-->
+         <p class="mt-4 mb-5"><a class="btn btn-secondary" href='animation.html'>영화로 보는 한국 근현대사</a></p>
+        </div>
       </div>
     </div>
   </div>

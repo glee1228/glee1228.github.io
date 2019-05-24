@@ -15,16 +15,16 @@ var sideNav = document.querySelector('ul.side-nav')
 var topbar = document.querySelector('div.topbar')
 var audios = document.querySelectorAll('audio:not(#startAudio)')
 var transition_description = function(){return new TweenLite.fromTo('#description',2,{opacity : 0}, {opacity : 1})};
-var transition_player = function(){return new TweenLite.fromTo('#player',2,{opacity : 0}, {opacity : 1})};
+// var transition_player = function(){return new TweenLite.fromTo('#player',2,{opacity : 0}, {opacity : 1})};
 
 // console.log(i);
 // transition_description().play();
 // description_step(i);
 //
 var reset_Area = function(){
-    transition_player().reverse();
+    // transition_player().reverse();
     transition_description().reverse();
-    $('#player').empty();
+    // $('#player').empty();
     $('#description').empty();
     tweenLite.killAll();
 };
@@ -73,10 +73,10 @@ for (var i = 0; i < slides.length; i++) {
             }
             if(currentStep!=PreviousStep){
                 transition_description().play();
-                transition_player().play();
+                // transition_player().play();
                 PreviousStep = currentStep;
                 description_step(currentStep);
-                youtubePlay(currentStep);
+                // youtubePlay(currentStep);
             }
             if (event.type === 'start' && event.state === 'BEFORE' &&triggerElementId === 'section1') {
                 topbar.style.display = 'none'
