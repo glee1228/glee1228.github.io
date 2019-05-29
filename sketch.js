@@ -6,16 +6,19 @@ var canvasWidth;
 var canvasHeight;
 let song;
 var dark=false;
+let timer = 10;
+
 function preload() {
   font = loadFont("fonts/STXINWEI.TTF");
   font2 = loadFont('fonts/조선일보명조.ttf');
   soundFormats('mp3', 'ogg');
-  song = loadSound('assets/music/bewhy_giukrok.mp3');
+  // song = loadSound('assets/music/bewhy_giukrok.mp3');
+  song = loadSound('assets/music/bewhy_myland.mp3');
   canvasWidth=windowWidth;
   canvasHeight=windowHeight;
 }
 function setup() {
-  frameRate(20);
+  frameRate(30);
   myCanvas= createCanvas(windowWidth,windowHeight) ;
   myCanvas.parent('p5Section');
   textFont(font);
@@ -136,6 +139,7 @@ function drawWords(x) {
 
   textFont(font);
 }
+
 function draw() {
   // 사운드 쪽
   let level = analyzer.getLevel();
@@ -147,6 +151,7 @@ function draw() {
   // nPow4 = pow(pluslevel,4);
   // nPow5 = pow(pluslevel,5);
   // twoPowN = pow(2,pluslevel);
+  //   print(frameCount);
 
 
   fft.analyze();
@@ -190,7 +195,8 @@ function draw() {
 
   c = [[87, 66, 102,150],[44, 150, 120,120],[156, 83, 51,90],[15,89,164,60],[192,63,60,30]];
   x = [0.0,0.1,0.2,0.3,0.4];
-  waveHeight=[300,350,370,420,480];
+  baseHeight=canvasHeight*1/3;
+  waveHeight=[baseHeight,baseHeight+50,baseHeight+80,baseHeight+140,baseHeight+210];
   thetaX = 0.01;
   thetaY = 0.01;
 
@@ -210,6 +216,7 @@ function draw() {
   drawWave(c[4],x[4],thetaX+0.06,thetaY,waveHeight[4],treble);
   // print('draw')
     drawTitle(c);
+
 }
 function centerCanvas() {
   myCanvas.parent('p5Section');
