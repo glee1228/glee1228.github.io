@@ -30,7 +30,7 @@ var reset_Area = function(){
 };
 
 function darkToggle(elementId) {
-    if (['section1', 'section3', 'section5', 'section7', 'section9', 'section11'].includes(elementId)) {
+    if (['section1', 'section2','section3','section4', 'section5','section6', 'section7','section8', 'section9','section10', 'section11'].includes(elementId)) {
         navs.forEach(function(el) {
             el.classList.toggle('dark')
         })
@@ -64,12 +64,13 @@ for (var i = 0; i < slides.length; i++) {
             var triggerElemenAudio = triggerElement.querySelector('audio')
             currentStep=fn(triggerElementId);
             // console.log('현재 section',currentStep);
-            if(currentStep==1){
+            if(currentStep==1||currentStep==11){
 
-                $('.description').css('background-color', 'rgba(255, 255, 255, 0.0)');
+                $('.description').css('background-color', 'rgba(120, 120, 120, 0.0)');
             }
+
             else{
-                $('.description').css('background-color', 'rgba(255, 255, 255, 0.5)');
+                $('.description').css('background-color', 'rgba(120, 120, 120, 0.5)');
             }
             if(currentStep!=PreviousStep){
                 transition_description().play();
@@ -90,7 +91,7 @@ for (var i = 0; i < slides.length; i++) {
 
             }
             if (event.type === 'start' || event.type === 'end') {
-                darkToggle(triggerElementId)
+                // darkToggle(triggerElementId)
             }
         })
 
