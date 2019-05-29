@@ -6,6 +6,8 @@ var canvasWidth;
 var canvasHeight;
 let song;
 var dark=false;
+var animation=false;
+var musiccount=0;
 let timer = 10;
 
 function preload() {
@@ -33,11 +35,14 @@ function mousePressed() {
   if (song.isPlaying()) {
     // .isPlaying() returns a boolean
       dark=false;
+      animation=false;
     song.stop();
+    musiccount=0;
 
   } else {
     dark=true;
     song.play();
+    musiccount=frameCount;
   }
 }
 function drawWave(c,x,thetaX,thetaY,waveHeight,level){
@@ -71,7 +76,7 @@ function drawWave(c,x,thetaX,thetaY,waveHeight,level){
   vertex(0, height);
   endShape(CLOSE);
 }
-function drawTitle(c){
+function drawTitle(){
   noStroke();
   textSize(30);
   // //첫 번째 데이터 이름
@@ -86,15 +91,26 @@ function drawTitle(c){
   // //네 번째 데이터 이름
   // fill(c[3][0],c[3][1],c[3][2],c[3][3]);
   // text('forth',320,50);
-  if(dark==true){
+  if(animation==true){
     fill(255,255,255,175);
-    text('Bewhy - 记忆录 ',windowWidth*7/10,70);
+    textSize(35);
+    textFont(font2);
+    text('Bewhy - 나의 땅 ',windowWidth*1/10,90);
     drawWords(windowWidth*9/10);
-
+    textFont(font);
   }
-  else{
+  if(dark==false&&animation==false){
       drawClick();
   }
+}
+function musicInstruction(){
+    background('#222222');
+    textFont(font2);
+    textSize(28);
+    fill(255);
+    text('이 곡은 3.1 운동 및 대한민국임시정부 수립 100주년을 기념하여 제작되었습니다', windowWidth*2/10,windowHeight/2);
+
+    textFont(font);
 }
 function drawClick() {
     textFont(font2);
@@ -162,9 +178,31 @@ function draw() {
   treble = (int)(fft.getEnergy("treble"));
 
   print(bass);
+  if((frameCount-musiccount)>150&&dark==true){
+      dark=false;
+      animation=true;
+  }
+  if((frameCount-musiccount)>150&&(frameCount-musiccount)<230&&dark==true){
+      dark=false;
+  }
+  c = [[87, 66, 102,150],[44, 150, 120,120],[156, 83, 51,90],[15,89,164,60],[192,63,60,30]];
+  x = [0.0,0.1,0.2,0.3,0.4];
+  baseHeight=canvasHeight*2/5;
+  waveHeight=[baseHeight,baseHeight+50,baseHeight+80,baseHeight+140,baseHeight+210];
+  thetaX = 0.01;
+  thetaY = 0.01;
 
+
+        // print('n : ',n,'  n의 3 제곱 : ',nPow3,' n의 4 제곱 : ',nPow4,' n의 5 제곱',nPow5);
+        // print('차이',nPow3-n);
+
+
+
+  if(dark==true){
+        musicInstruction();
+  }
   // 애니메이션 쪽
-    if(dark==true){
+  else if(animation==true){
         background(70);
         textSize(150);
         stroke(150);
@@ -176,8 +214,20 @@ function draw() {
         text(".",canvasWidth/2+200,canvasHeight/4+bass*0.5);
         fill(255);
         strokeWeight(1);
-    }
-    else{
+        fill(0);
+
+        stroke(255);
+
+        drawWave(c[0],x[0],thetaX,thetaY,waveHeight[0],bass);
+        drawWave(c[1],x[1],thetaX+0.01,thetaY,waveHeight[1],lowMid);
+        drawWave(c[2],x[2],thetaX+0.03,thetaY,waveHeight[2],mid);
+        drawWave(c[3],x[3],thetaX+0.05,thetaY,waveHeight[3],highMid);
+        drawWave(c[4],x[4],thetaX+0.06,thetaY,waveHeight[4],treble);
+
+        // print('draw')
+
+  }
+  else{
         background(235);
         textSize(150);
         stroke(150);
@@ -189,33 +239,20 @@ function draw() {
         text(".",canvasWidth/2+200,canvasHeight/4+bass*0.5);
         fill(0);
         strokeWeight(1);
-    }
+        fill(0);
+
+        stroke(255);
+
+        drawWave(c[0],x[0],thetaX,thetaY,waveHeight[0],bass);
+        drawWave(c[1],x[1],thetaX+0.01,thetaY,waveHeight[1],lowMid);
+        drawWave(c[2],x[2],thetaX+0.03,thetaY,waveHeight[2],mid);
+        drawWave(c[3],x[3],thetaX+0.05,thetaY,waveHeight[3],highMid);
+        drawWave(c[4],x[4],thetaX+0.06,thetaY,waveHeight[4],treble);
+  }
+  drawTitle();
 
 
 
-  c = [[87, 66, 102,150],[44, 150, 120,120],[156, 83, 51,90],[15,89,164,60],[192,63,60,30]];
-  x = [0.0,0.1,0.2,0.3,0.4];
-  baseHeight=canvasHeight*1/3;
-  waveHeight=[baseHeight,baseHeight+50,baseHeight+80,baseHeight+140,baseHeight+210];
-  thetaX = 0.01;
-  thetaY = 0.01;
-
-
-  // print('n : ',n,'  n의 3 제곱 : ',nPow3,' n의 4 제곱 : ',nPow4,' n의 5 제곱',nPow5);
-  // print('차이',nPow3-n);
-
-
-  fill(0);
-
-  stroke(255);
-
-  drawWave(c[0],x[0],thetaX,thetaY,waveHeight[0],bass);
-  drawWave(c[1],x[1],thetaX+0.01,thetaY,waveHeight[1],lowMid);
-  drawWave(c[2],x[2],thetaX+0.03,thetaY,waveHeight[2],mid);
-  drawWave(c[3],x[3],thetaX+0.05,thetaY,waveHeight[3],highMid);
-  drawWave(c[4],x[4],thetaX+0.06,thetaY,waveHeight[4],treble);
-  // print('draw')
-    drawTitle(c);
 
 }
 function centerCanvas() {
