@@ -1,7 +1,7 @@
 var controller = new ScrollMagic.Controller({
     vertical:false,
     globalSceneOptions: {
-        triggerHook: 0.0,
+        triggerHook: 0.1,
     }
 })
 controller.scrollTo(function(newpos) {
@@ -26,6 +26,7 @@ var reset_Area = function(){
     transition_description().reverse();
     // $('#player').empty();
     $('#description').empty();
+
     tweenLite.killAll();
 };
 
@@ -64,12 +65,13 @@ for (var i = 0; i < slides.length; i++) {
             var triggerElemenAudio = triggerElement.querySelector('audio')
             currentStep=fn(triggerElementId);
             // console.log('현재 section',currentStep);
-            if(currentStep==1||currentStep==11){
-
+            if(currentStep==1){
+                $('.transportation').css('width','0%');
                 $('.description').css('background-color', 'rgba(120, 120, 120, 0.0)');
             }
 
             else{
+                $('.transportation').css('width','300px');
                 $('.description').css('background-color', 'rgba(120, 120, 120, 0.5)');
             }
             if(currentStep!=PreviousStep){

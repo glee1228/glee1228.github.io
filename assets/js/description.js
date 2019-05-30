@@ -109,4 +109,17 @@ var description_step = function(i) {
 
 
     }
+    else if(i==10){
+        $(".description").append('<div class="year">');
+        $(".description").append('<div class="year-inner">21세기, 새로운 시대 ! </div>');
+        $(".description").append('<hr>');
+        $(".description").append('<div class="year-desc">');
+        $(".description").append('없음');
+        $(".description").append(' ');
+        $(".description").append('</div>');
+        $(".description").append('</div>');
+
+
+
+    }
 };
