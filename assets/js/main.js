@@ -79,7 +79,8 @@ for (var i = 0; i < slides.length; i++) {
                 // transition_player().play();
                 PreviousStep = currentStep;
                 description_step(currentStep);
-                // youtubePlay(currentStep);
+                news_step(currentStep);
+                videoplayer_step(currentStep);
             }
             if (event.type === 'start' && event.state === 'BEFORE' &&triggerElementId === 'section1') {
                 topbar.style.display = 'none'
