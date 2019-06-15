@@ -1,3 +1,7 @@
+if(window.innerHeight>847){
+    $('.seoul').css('background-image','url("assets/img/back2.jpg")');
+}
+
 var controller = new ScrollMagic.Controller({
     vertical:false,
     globalSceneOptions: {
@@ -59,6 +63,7 @@ for (var i = 0; i < slides.length; i++) {
 
     var PreviousStep=0;
     if (i < 12) {
+
         scene.on("change progress start end enter leave", function (event) {
             var triggerElement = event.currentTarget.triggerElement()
             var triggerElementId = triggerElement.id;
