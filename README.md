@@ -1,6 +1,5 @@
 ## Visual-Programming [역사를 그리다]
 ### by TEAM 소법전
-[![license]](/LICENSE)
 ![javascript](https://img.shields.io/github/languages/top/glee1228/glee1228.github.io.svg?color=red)
 [![HitCount](http://hits.dwyl.io/glee1228/glee1228githubio.svg)](http://hits.dwyl.io/glee1228/glee1228githubio)
 - Sound Visualization Demo : [http://glee1228.github.io/](http://glee1228.github.io/)
@@ -17,5 +16,3 @@
 ![taxidriver](./assets/img/animation_taxidriver.png)
 ![newspaper](./assets/img/animation_newspaper.png)
 ![2010s](./assets/img/animation_2010s.png)
-
- [license]: https://img.shields.io/badge/license-MIT-blue.svg
