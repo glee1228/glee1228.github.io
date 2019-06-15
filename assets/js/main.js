@@ -1,5 +1,6 @@
 if(window.innerHeight>847){
     $('.seoul').css('background-image','url("assets/img/back2.jpg")');
+    $('.transportation').css('top','38%');
 }
 
 var controller = new ScrollMagic.Controller({
