@@ -330,7 +330,9 @@ li.dark:hover {
     top : 10%;
     background-color : rgba(236, 236, 236, 0.24);
     padding : 30px;
-    /*background-image: url("../img/newspaper.png")*/
+    font-size: 18px;
+
+
 
 }
 #myImg {
@@ -430,8 +432,8 @@ li.dark:hover {
 }
 
 .year-inner {
-    font-size: 22pt;
-    color: #B10909;
+    font-size: 35pt;
+    color: #fffbf7;
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
