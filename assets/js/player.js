@@ -7,7 +7,9 @@ var videoplayer_step = function(i) {
     var myframe = document.getElementById("player");
     if(i==0||i==10){
         myframe.setAttribute("width", "0");
-        player.stopVideo();
+        $('#player').each(function(){
+  this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+});
     }
     if(i==1) {
         myframe.setAttribute("width", "640");
