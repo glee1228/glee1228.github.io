@@ -5,12 +5,13 @@ var videoplayer_step = function(i) {
     i-=1;
     console.log(i);
     var myframe = document.getElementById("player");
-    if(i==0){
+    if(i==0||i==10){
         myframe.setAttribute("width", "0");
+        player.stopVideo();
     }
     if(i==1) {
-        player.playVideoAt(0);
         myframe.setAttribute("width", "640");
+        player.playVideoAt(0);
 
     }
     else if(i==2){
@@ -40,10 +41,8 @@ var videoplayer_step = function(i) {
         player.playVideoAt(7);
     }else if(i==9) {
         // $(".player-container").append('<video width="100%" height="auto" id="autoplay" controls crossorigin playsinline poster="assets/img/9_colorful_holiday.png"><source src="assets/video/9_colorful_holiday.mp4" type="video/mp4"></video>');
+        myframe.setAttribute("width", "640");
         player.playVideoAt(8);
-    }else if(i==10){
-        // $(".player-container").append('<video width="100%" height="auto" id="autoplay" controls crossorigin playsinline poster="assets/img/10_taxi_driver.png"><source src="assets/video/10_taxi_driver.mp4" type="video/mp4"></video>');
-        player.playVideoAt(9);
     }
 
 

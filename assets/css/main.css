@@ -190,7 +190,7 @@ li.dark:hover {
     width : 300px;
     height : 275px;
     left : 6%;
-    top : 44%;
+    top : 36%;
     /*padding : 70px;*/
     background-image: url("../img/small_train.png")
 
@@ -205,9 +205,10 @@ li.dark:hover {
 .logo {
     padding-top: 0%;
     color: #fbfffb;
+    color: #fbfffb;
     padding-bottom: 1px;
     letter-spacing: 1px;
-    font-size: 48pt;
+    font-size: 45pt;
     font-weight: 300;
 }
 .logo2{
@@ -269,7 +270,7 @@ li.dark:hover {
     background-image: url('../img/gwanghwamoon.png');
 }
 .seoul{
-    background-image: url('../img/test.jpg');
+    background-image: url('../img/back.jpg');
 }
 .panel {
     /*height: 100%;*/
@@ -282,7 +283,7 @@ li.dark:hover {
 
 .horizontal{
     height: 100%;
-    width:1800%;
+    width:1900%;
 }
 
 .column{
@@ -327,7 +328,7 @@ li.dark:hover {
     height : auto;
     left : 60%;
     top : 10%;
-    background-color : rgba(120, 120, 120, 0.5);
+    background-color : rgba(236, 236, 236, 0.24);
     padding : 30px;
     /*background-image: url("../img/newspaper.png")*/
 
@@ -360,7 +361,7 @@ li.dark:hover {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 1080px;
 }
 
 /* Caption of Modal Image */

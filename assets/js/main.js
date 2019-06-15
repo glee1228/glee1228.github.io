@@ -58,14 +58,14 @@ for (var i = 0; i < slides.length; i++) {
     })
 
     var PreviousStep=0;
-    if (i < 11) {
+    if (i < 12) {
         scene.on("change progress start end enter leave", function (event) {
             var triggerElement = event.currentTarget.triggerElement()
             var triggerElementId = triggerElement.id;
             var triggerElemenAudio = triggerElement.querySelector('audio')
             currentStep=fn(triggerElementId);
             // console.log('현재 section',currentStep);
-            if(currentStep==1){
+            if(currentStep==1||currentStep>=11){
                 $('.transportation').css('width','0%');
                 $('.description').css('background-color', 'rgba(120, 120, 120, 0.0)');
             }
