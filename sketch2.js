@@ -1,3 +1,6 @@
+//채택되지 못한 sketch file 입니다.
+//이미지를 시간순으로 모자이크 처리하는 애니메이션입니다.
+
 var img;
 var arraylist = [];
 var resMax = 24;
