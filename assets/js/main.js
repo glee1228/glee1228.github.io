@@ -1,5 +1,9 @@
-if(window.innerHeight>847){
+if(window.innerHeight>847&&window.innerHeight<1180){
     $('.seoul').css('background-image','url("assets/img/back2.jpg")');
+    $('.transportation').css('top','38%');
+}
+else if(window.innerHeight>1180){
+    $('.seoul').css('background-image','url("assets/img/back3.jpg")');
     $('.transportation').css('top','38%');
 }
 
