@@ -60,3 +60,9 @@ sound에서 저음, 중저음, 중음, 중고음, 고음 5가지 fft를 추출�
 ```
 
 **사용 기술 - Scrollmagic , TweenLite, html, js, css, Youtube player API, jquery**
+
+## Reference
+Site : [http://ondreihomola.com](http://ondreihomola.com)
+
+Library : [Scrollmagic.io](Scrollmagic.io) , [TweenLite](https://greensock.com/tweenlite), [YoutubePlayerAPI](https://developers.google.com/youtube/iframe_api_reference?hl=ko),  [p5.js](https://p5js.org/)
+
