@@ -59,8 +59,14 @@ sound에서 저음, 중저음, 중음, 중고음, 고음 5가지 fft를 추출�
 역사가 흘러 발전된 도시 skyline을 벡터 이미지로 표현합니다.
 ```
 
-**사용 기술 - Scrollmagic , TweenLite, html, js, css, Youtube player API, jquery**
+**사용 기술 - ScrollMagic , TweenLite, html, js, css, Youtube player API, jquery**
 
+ScrollMagic : 수평 스크롤 화면에서 trigger[기준점]를 만들고 section[화면구간]을 분할해, 구간 별 이벤트를 제어하는 역할을 합니다.
+TweenLite : ScrollMagic과 호환성이 좋고, Jquery와 마찬가지로 애니메이션 및 DOM 조작을 위한 라이브러리입니다. Jquery에 비해 자연스러움 움직임을 표현합니다.
+YoutubePlayerAPI : IFrame Player API를 통해 웹사이트에 YouTube 동영상 플레이어를 퍼가고 JavaScript를 사용하여 플레이어를 제어할 수 있습니다. 웹페이지에 Flash 개체를 삽입하는 것과 관련된 Flash 및 JavaScript Player API와 달리 IFrame API는 콘텐츠를 페이지의 <iframe> 태그에 게시합니다.
+P5.js : 디자이너와 아티스트들이 좀 더 손쉽게 프로그래밍에 접근할 수 있도록 만들어진 processing이라는 프로그램을 기반으로 만들어진 javascript기반의 라이브러리입니다.
+
+  
 ## Reference
 Site : [http://ondrejhomola.com](http://ondrejhomola.com/)
 
