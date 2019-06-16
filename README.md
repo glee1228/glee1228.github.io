@@ -3,7 +3,7 @@
 ![javascript](https://img.shields.io/github/languages/top/glee1228/glee1228.github.io.svg?color=red)
 [![HitCount](http://hits.dwyl.io/glee1228/glee1228githubio.svg)](http://hits.dwyl.io/glee1228/glee1228githubio)
 - Sound Visualization Demo : [http://glee1228.github.io/](http://glee1228.github.io/)
-- Historical flow Visualization Demo : [http://glee1228.github.io/animation.html](http://glee1228.github.io/animation.html)
+- Historical flow Visualization Demo **[PC or laptop only]** : [http://glee1228.github.io/animation.html](http://glee1228.github.io/animation.html)
 
 ## **스크린샷**
 - [3.1 운동 100주년을 그리다](https://github.com/glee1228/glee1228.github.io/issues/1)
