@@ -50,7 +50,7 @@ var slides = document.querySelectorAll('section.panel')
 var navs = document.querySelectorAll('ul li')
 var sideNav = document.querySelector('ul.side-nav')
 var topbar = document.querySelector('div.topbar')
-var audios = document.querySelectorAll('audio:not(#startAudio)')
+// var audios = document.querySelectorAll('audio:not(#startAudio)')
 var transition_description = function(){return new TweenLite.fromTo('#description',2,{opacity : 0}, {opacity : 1})};
 // var transition_player = function(){return new TweenLite.fromTo('#player',2,{opacity : 0}, {opacity : 1})};
 
@@ -95,12 +95,12 @@ for (var i = 0; i < slides.length; i++) {
     })
 
     var PreviousStep=0;
-    if (i < 12) {
+    if (i < 11) {
 
         scene.on("change progress start end enter leave", function (event) {
             var triggerElement = event.currentTarget.triggerElement()
             var triggerElementId = triggerElement.id;
-            var triggerElemenAudio = triggerElement.querySelector('audio')
+            // var triggerElemenAudio = triggerElement.querySelector('audio')
             currentStep=fn(triggerElementId);
             // console.log('현재 section',currentStep);
             if(currentStep==1||currentStep>=11){
@@ -135,13 +135,13 @@ for (var i = 0; i < slides.length; i++) {
                 // darkToggle(triggerElementId)
             }
         })
-
+        console.log(navs[i]);
         scene.setClassToggle(navs[i], 'active')
     }
-
     if (i === 11) {
         scene.setClassToggle(sideNav, 'fade-dark')
     }
+
 }
 
 // scrollTo
@@ -156,15 +156,15 @@ anchorIds.forEach(function(el) {
 
     }
 })
-
-
-// audio ended event
-audios.forEach(function(el) {
-    el.onended = function() {
-        var toSection = '#section' + (1 + parseInt(this.id.split(/\D/)[5]))
-        controller.scrollTo(toSection)
-    }
-})
+//
+//
+// // audio ended event
+// audios.forEach(function(el) {
+//     el.onended = function() {
+//         var toSection = '#section' + (1 + parseInt(this.id.split(/\D/)[5]))
+//         controller.scrollTo(toSection)
+//     }
+// })
 
 
 
