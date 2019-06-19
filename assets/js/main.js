@@ -138,21 +138,6 @@ anchorIds.forEach(function(el) {
 })
 
 
-// mute
-document.getElementById('muteBtn').onclick = function() {
-    if (this.classList.value.includes('mute-off')) {
-        this.classList.toggle('mute-off')
-        this.classList.add('mute-on')
-    } else {
-        this.classList.toggle('mute-on')
-        this.classList.add('mute-off')
-    }
-
-    document.querySelectorAll('audio').forEach(function(self) {
-        self.muted = !self.muted
-    })
-}
-
 // audio ended event
 audios.forEach(function(el) {
     el.onended = function() {
