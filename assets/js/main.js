@@ -1,11 +1,11 @@
 if(window.innerHeight<=847) {
 
     console.log($('.seoul')[0]);
-    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back.jpg")');//image height : 847
+    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back5.jpg")');//image height : 847
     $('.transportation').css('top','36%');
 }
 else if(window.innerHeight>847&&window.innerHeight<990){
-    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back2.jpg")'); //image height : 879
+    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back6.jpg")'); //image height : 879
     $('.transportation').css('top','38%');
 }
 else if(window.innerHeight>=990&&window.innerHeight<1150){
