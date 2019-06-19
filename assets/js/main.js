@@ -14,7 +14,7 @@ else if(window.innerHeight>847&&window.innerHeight<990){
     else{
         $('.seoul').css('background-image','url("assets/img/back2.jpg")'); //image height : 847
     }
-    $('.transportation').css('top','38%');
+    $('.transportation').css('top','42%');
 }
 else if(window.innerHeight>=990&&window.innerHeight<1150){
     if(window.innerWidth>1700){
@@ -23,7 +23,7 @@ else if(window.innerHeight>=990&&window.innerHeight<1150){
     else{
         $('.seoul').css('background-image','url("assets/img/back3.jpg")'); //image height : 1080
     }
-    $('.transportation').css('top','42%');
+    $('.transportation').css('top','44%');
 }
 else if(window.innerHeight>=1150){
     if(window.innerWidth>1700){
