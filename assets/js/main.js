@@ -1,17 +1,19 @@
 if(window.innerHeight<=847) {
-    $('.seoul').css('background-image','url("assets/img/back.jpg")'); //image height : 847
+
+    console.log($('.seoul')[0]);
+    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back.jpg")');//image height : 847
     $('.transportation').css('top','36%');
 }
 else if(window.innerHeight>847&&window.innerHeight<990){
-    $('.seoul').css('background-image','url("assets/img/back2.jpg")'); //image height : 879
+    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back2.jpg")'); //image height : 879
     $('.transportation').css('top','38%');
 }
 else if(window.innerHeight>=990&&window.innerHeight<1150){
-    $('.seoul').css('background-image','url("assets/img/back3.jpg")'); //image height : 1080
+    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back3.jpg")'); //image height : 1080
     $('.transportation').css('top','42%');
 }
 else if(window.innerHeight>=1150){
-    $('.seoul').css('background-image','url("assets/img/back4.jpg")'); //image height : 1287
+    $('.seoul')[0].setAttribute('background-image', 'url("assets/img/back4.jpg")'); //image height : 1287
     $('.transportation').css('top','47%');
 }
 
