@@ -250,6 +250,7 @@ li.dark:hover {
 }
 .seoul{
     background-image: url('../img/back.jpg');
+    background-size : cover;
 }
 .panel {
     /*height: 100%;*/
