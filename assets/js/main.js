@@ -5,7 +5,7 @@ if(window.innerHeight<=847) {
     else{
         $('.seoul').css('background-image','url("assets/img/back.jpg")'); //image height : 847
     }
-    $('.transportation').css('top','36%');
+    $('.transportation').css('top','38%');
 }
 else if(window.innerHeight>847&&window.innerHeight<990){
     if(window.innerWidth>1700){
